@@ -1,0 +1,168 @@
+<html><head><title>Amp/Filter Board</title>
+</head>
+<body BACKGROUND="backgnd.jpg">
+<center><h1><a name="Top"></a>PSN-ADC-EQAMP</h1>
+<h2>One to Four Channel Seismic Amplifier / Filter Board</h2>
+<b>Last Updated: 09/15/2018</b><h3>Here are the <a href="eqamp4ch_schematic_20Hz.pdf">schematic</a>
+and <a href="eqamp4ch_plots.zip">Gerber plot</a> files for this board</h3>
+<h1><img SRC="serialampnew.jpg" width="400" height="327"></h1>
+</center>
+<h2>Specifications:</h2>
+<blockquote>
+  <pre><b>Number of channels:        One to Four Independent Amplifier / Filter  Channels
+Gain:                      ~145 to ~6,000 - Set by Trim Pot and Jumper
+Frequency Response:        0.016Hz (60 Sec.) to 10Hz for Lehman Type Sensors or 
+                           0.05Hz (20 Sec.) to 20Hz for Geophone Sensors (<a href="#Note1">Note 1</a>)
+Lowpass Filter Type:       7 Pole Butterworth Filter
+Highpass Filter Type:      1 Pole Butterworth Filter
+Input Connectors:          RCA Jacks (Stereo Equipment Type) or
+                           .156 Inch 2-Pin Molex Connector or
+                           Terminal Screw Block
+Output Connector:          26 Pin .1 Inch Dual Row Header 
+Input Impedance:           ~10K (<a href="#Note2">Note 2</a>)
+Output Voltage:            +- 10 Volts Into 10K Load 
+Power Requirements:        +-12 VDC - Normally Receives Power from the A/D Board
+Board Dimensions:          5.000 x 5.750 Inches or 12.7 x 14.6 Centimeters
+</b></pre>
+</blockquote>
+<hr>
+<h2>Description:</h2>
+<blockquote>
+<p>The PSN-ADC-EQAMP board has one to four independent amplifier / filter
+channels. Each channel has a&nbsp; very low noise front end op-amp, variable
+gain stage, 10 Hz or 20 Hz (Note 1) 7 pole
+lowpass filter, and a 60 or 20 second 1 pole highpass filter. This board is designed to
+be &quot;piggy-backed&quot; with the <a href="serialatod.html">PSN-ADC-SERIAL</a>
+or <a href="serialatod.html">PSN-ADC-USB</a> 16-Bit Analog to Digital Converter Board.</p>
+</blockquote>
+<p align="center"><img border="0" src="module.jpg" width="300" height="272"></p>
+<hr>
+<h2>Cost:</h2>
+<ul>
+<li>One Channel - <b> $80.00</b></li>
+<li>Two Channels - <b> $115.00</b></li>
+<li>Three Channels - <b> $150.00</b></li>
+<li>Four Channels - <b> $185.00</b></li>
+</ul>
+<blockquote>
+  <b>Options:</b>
+<ul>
+  <li>Mounting Kit - <b> $10.00 </b> Includes the following:&nbsp; 20 Pin Ribbon connector and mounting hardware
+    (standoffs) to mount the
+    Amp/Filter board to the A/D board and the A/D board to a box.</li>
+ <li><a href="/datalogger/index.html">Enclosures for Amp/Filter and A/D boards</a>
+</ul>
+</blockquote>
+<hr>
+<h2 align="left">Frequency Response Plots:</h2>
+<blockquote>
+  <p align="left">The plot below shows the frequency response of the
+  PSN-ADC-EQAMP with the standard Lehman and Geophone lowpass and highpass
+  filter configurations.</p>
+</blockquote>
+<p align="center"><img border="0" src="eqampfreq.gif" width="808" height="502"></p>
+<hr>
+<h2>Gain Adjustment:</h2>
+<blockquote>
+  Each channel has a two-pin jumper that controls the gain of the first op-amp.
+  With the jumper in, the gain of the board will be ~145 to ~1700. This range
+  should be used with sensors that have a high output voltage, like a geophone.
+  With the jumper removed, the gain range is ~600 to ~6000. This input range
+  should be used with sensors that produce less of an output voltage.
+  <p>Each channel also has a variable gain stage with a range of 1x to 10x. The
+  gain trim pot for each channel is marked &quot;Gain&quot; next to the part.
+  When setting up your system, the user should first try the board with the gain
+  jumper removed and the gain pot turned to minimum (fully counter clockwise).
+  If there is too much signal the jumper should be inserted and the gain pot
+  adjusted if needed.&nbsp;
+  <p>If there is still too much signal you will need to reduce the voltage from
+  the sensor by using a resistor divider <a href="/onlinedocs/voltdrop.gif">(schematic)</a>.
+  Each channel as a 10k resistor to ground unless you specified a different
+  input impendence. This resistor can be used as one leg of the divider. The
+  other resistor is placed in the signal path. A 10k resistor will reduce the
+  voltage by 2 and a 100k resistor will reduce the voltage by 10. If you have a
+  long wire between the sensor and the input to the board the resistor in the
+  signal path should be placed near the Amp/Filter board.
+</blockquote>
+<h2>DC Offset Adjustment:</h2>
+<blockquote>
+  Each channel also has a DC Offset pot marked &quot;Offset&quot; next to the
+  part. This adjustment has been set at the factory. If you do need to set the
+  DC offset, adjust the pot for 0.000 volts at the output with no input signal.
+  Wait for 1 to 2 minutes after you turn on the power before setting the Offset
+  trim pot.
+</blockquote>
+<hr>
+<h2> Connector Information:</h2>
+<blockquote>
+  <p><b>Input Connectors:</b></p>
+    
+  <blockquote>
+    <p>The input connector for each channel can be one of the following. Please
+    specify when ordering.&nbsp;</p>
+    
+    <ul>
+      <li><a href="conrca.jpg">RCA Jack</a>&nbsp;</li>
+      <li>.<a href="con156.jpg">156 Inch 2-Pin Molex</a> connector with mating connector block and
+        pins&nbsp;</li>
+      <li><a href="conterm.jpg">Terminal Block Screws</a></li>
+    </ul>
+    <p align="left">If the board is placed in the option plastic box you will need to use
+    either the .156 Molex or terminal block screw input connector
+    option. There is not enough room in the box to use the RCA jack and mating
+    plug.</p>
+    
+  </blockquote>
+  <p><b>Output Connector:</b></p>
+    
+  <blockquote>
+    <p>The 26 pin header connector on the board is used to supply the analog signals to
+    the A/D board and to power the Amp/Filter board. The connector has the
+    following pinout:</p>
+    
+    <ul>
+      <li>Pin 1 - Onboard Analog Input Channel 1</li>
+      <li>Pin 3 - Onboard Analog Input Channel 2</li>
+      <li>Pin 5 - Onboard Analog Input Channel 3</li>
+      <li>Pin 7 - Onboard Analog Input Channel 4 also Connected to J7 Pin 2</li>
+      <li>Pin 9 - Analog Input Channel 5 - Connected to J7 Pin 4&nbsp;</li>
+      <li>Pin 11 - Analog Input Channel 6 - Connected to J7 Pin 6</li>
+      <li>Pin 13 - Analog Input Channel 7 - Connected to J7 Pin 8</li>
+      <li>Pin 15 - Analog Input Channel 8 - Connected to J7 Pin 10</li>
+      <li>Pin 2, 4, 6, 8, 10, 12, 14, 16 -&nbsp; Analog Grounds for Channels 1
+        to 8</li>
+      <li>Pins 19 and 21 - +12 VDC Input Power</li>
+      <li>Pins 20 and 22 - -12 VDC Input Power</li>
+      <li>Pin 17, 18, 23, 24, 25, 26 - Digital Ground</li>
+    </ul>
+    <p>The connector J7 is a 5 x 2 pin .1 inch center header that can be used to
+    extend the unused A/D channels to other equipment.&nbsp;</p>
+  </blockquote>
+    
+</blockquote>
+<hr>
+<h2>Notes:</h2>
+<blockquote>
+<p><a name="Note1">1</a>: Other low-pass and high-pass cutoff frequencies available<br>
+<a name="Note2">2</a>: Other input impedances available or damping resistor for
+Geophones
+</blockquote>
+<hr>
+<h2>Additional Information:</h2>
+<ul>
+<li><a href="serialatod.html">PSN-ADC-SERIAL / PSN-ADC-USB </a>16-Bit Analog to Digital
+  Converter Board
+<li><a href="eqamp.html">Seismic Amplifier / Filter Board</a> - This board has
+  an onboard power supply and can drive long runs of cable
+<li><a HREF="coilmag.html">Pickup Coil and Magnet</a> for Lehman Sensors
+<li><a href="/geophone/index.html">Used Geophones</a> for sale
+</ul>
+<hr>
+<p align="center">This page viewed <img src="/cgi-bin/pagecounter?serialamp.html" alt="Counter Image">
+times since October 5, 2002</p>
+<hr>
+<center>[ <a HREF="index.html#Equipment">Equipment</a> ] 
+[ <a HREF="index.html">Home</a> ] [<a href="#Top">Top</a>]
+</center>
+<p align="center"><a HREF="contact.html">Contact Information</a></p>
+</body></html>
